@@ -1,12 +1,20 @@
 Cat witchCat;
-Crows crowOne;
+Crows crows;
+
+float crowX = random(750);
+float crowY = random(750);
+
+int frameTimer = 150;
+
+ArrayList<Crows> birds;
 
 void setup() {
   noStroke();
- size(800, 800); 
+ size(800, 800);
+ birds = new ArrayList<Crows>();
  
  witchCat = new Cat();
- crowOne = new Crows();
+ crows = new Crows();
 }
 
 void draw() {
@@ -17,13 +25,20 @@ void draw() {
   
   witchCat.display(); //display the cat
   witchCat.fall();
-  crowOne.display();
+  crows.display();
+  crows.glide();
+  
+  for (int i = 0; i < birds.size(); i++) {
+   birds.get(i).display();
+   birds.get(i).glide();
+  }
+  
+  if (frameCount%frameTimer == 1) {
+    birds.add(new Crows());
+  }
 }
 
 void keyPressed() {
-  if (keyPressed == true) {
-  witchCat.fly();
-  } else {
-   witchCat.fall(); 
-  }
+  witchCat.fly(); //make the cat jump in the air slightly
+
 }

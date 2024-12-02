@@ -4,14 +4,14 @@ class Cat{
   PVector velocityY;
   PVector accelerationY;
   PVector flySpeed;
-  float gravity = 0.015;
+  float gravity = 0.5;
   
   Cat() { //constructor, use instead of setup
     img = loadImage("cat-sprite.png");
-    accelerationY = new PVector (0, 0.015);
+    accelerationY = new PVector (0, gravity);
     velocityY = new PVector (0, 0);
     position = new PVector (300, 300);
-    flySpeed = new PVector (0, -20);
+    flySpeed = new PVector (0, -10);
   }
   
   void display() {

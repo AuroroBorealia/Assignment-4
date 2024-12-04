@@ -1,8 +1,15 @@
 Cat witchCat;
 Crows crows;
 
+
+
+int menu = 0;
+//0 - starting screen; 1 - game state; 2 - game end
+
 float crowX = random(750);
 float crowY = random(750);
+
+boolean collision = false; //testing for collision between cats and crows
 
 int frameTimer = 150;
 
@@ -36,6 +43,8 @@ void draw() {
   if (frameCount%frameTimer == 1) {
     birds.add(new Crows());
   }
+  
+  
 }
 
 void keyPressed() {

@@ -44,10 +44,19 @@ void draw() {
     birds.add(new Crows());
   }
   
-  
+  //check for collison
+  boolean hit = circleCircle(catColliderPosition, catColliderRadius, crowColliderPosition, crowcColliderRadius); {
+    
+  }
 }
 
 void keyPressed() {
   witchCat.fly(); //make the cat jump in the air slightly
 
+}
+
+//circleCircle collison
+boolean circleCircle(float catColliderPosition, float catColliderRadius, float crowColliderPosition, float crowcColliderRadius) {
+  float disPos = catColliderPosition - crowColliderPosition;
+  
 }

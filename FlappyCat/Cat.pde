@@ -6,8 +6,8 @@ class Cat{
   PVector flySpeed;
   float gravity = 0.5;
   
-  PVector catColliderPosition;
-  float catColliderRadius;
+  PVector colliderPosition;
+  float colliderRadius;
   
   Cat() { //constructor, use instead of setup
     img = loadImage("cat-sprite.png");
@@ -16,7 +16,7 @@ class Cat{
     position = new PVector (300, 300);
     flySpeed = new PVector (0, -10);
     
-    catColliderRadius = 150;
+    colliderRadius = 150;
   }
   
   void display() {
@@ -28,7 +28,7 @@ class Cat{
     position.add(velocityY);
     velocityY.add(accelerationY);
     
-    catColliderPosition = new PVector(position.x + 110, position.y + 85);
+    colliderPosition = new PVector(position.x + 110, position.y + 85);
     
   }
   

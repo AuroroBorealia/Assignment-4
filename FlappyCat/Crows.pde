@@ -6,8 +6,8 @@ class Crows {
   PVector acceleration;
   boolean isOffScreen = false;
 
-  PVector crowColliderPosition;
-  float crowColliderRadius;
+  PVector colliderPosition;
+  float colliderRadius;
 
   Crows() {
     img = loadImage("crow-sprite.png");
@@ -15,7 +15,7 @@ class Crows {
     velocity = new PVector(1, 0);
     acceleration = new PVector(0.001, 0);
 
-    crowColliderRadius = 65;
+    colliderRadius = 65;
   }
 
   void display() {
@@ -26,7 +26,7 @@ class Crows {
     velocity.add(acceleration);
     position.add(velocity);
 
-    crowColliderPosition = new PVector(position.x + 55, position.y + 45);
+    colliderPosition = new PVector(position.x + 55, position.y + 45);
 
     //circle(colliderPosition.x, colliderPosition.y, colliderRadius); testing the radius of the crows
   }

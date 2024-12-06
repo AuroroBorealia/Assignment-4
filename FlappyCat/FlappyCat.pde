@@ -1,6 +1,7 @@
 Cat witchCat;
 Crows crows;
-
+EndScreen ending;
+StartScreen start;
 
 int menu = 0;
 //0 - starting screen; 1 - game state; 2 - game end
@@ -34,13 +35,24 @@ void setup() {
 
   witchCat = new Cat();
   crows = new Crows();
+  ending = new EndScreen();
+  start = new StartScreen();
 }
 
 void draw() {
   noStroke();
+  
+  
+  
   background(222, 168, 98);
   fill(245, 234, 205);
   circle(400, 90, 250); //moon
+  fill(255, 255, 255, 50);
+  //clouds for added background details
+  ellipse(100, 250, 300, 150);
+  ellipse(160, 200, 250, 100);
+  ellipse(500, 160, 375, 125);
+  ellipse(650, 210, 300, 135);
 
 
   witchCat.display(); //display the cat
@@ -64,6 +76,7 @@ void draw() {
   
   //if (witchCat.position.y > height) {
     //alternate line of code for in case I can't get collison to work out
+    // menu = 2;
   //}
 }
 

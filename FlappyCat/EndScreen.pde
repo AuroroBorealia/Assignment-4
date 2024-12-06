@@ -12,8 +12,10 @@ class EndScreen {
     rectMode(CORNERS);
     fill(1, 71, 234);
     rect(200, 200, 600, 600); //button
-    
-    
+
+    textSize(30);
+    fill(0);
+    text("RETRY", 205, 205);
   }
 
   void update() {

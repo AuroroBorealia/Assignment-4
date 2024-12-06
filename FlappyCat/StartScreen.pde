@@ -18,7 +18,7 @@ class StartScreen {
     text("START", 205, 205);
   }
 
-  void update() {
+  void pressTheButton() {
     if (mousePressed == true && Pressed == false) {
       Pressed = true;
       if (mouseX>= 200 && mouseX <= 600 && mouseY >= 200 && mouseY <= 600) {

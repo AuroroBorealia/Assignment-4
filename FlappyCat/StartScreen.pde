@@ -9,19 +9,19 @@ class StartScreen {
     fill(0);
     rect(0, 0, 800, 800); //background screen for start screen
     
-    rectMode(CORNERS);
-    fill(1, 71, 234);
-    rect(200, 200, 600, 600); //button
+    rectMode(CORNER);
+    fill(167, 36, 255);
+    rect(200, 350, 400, 100); //button
 
-    textSize(30);
+    textSize(90);
     fill(0);
-    text("START", 205, 205);
+    text("START", 275, 430);
   }
 
-  void pressTheButton() {
+  void pressTheButton() { //pressing the start button
     if (mousePressed == true && Pressed == false) {
       Pressed = true;
-      if (mouseX>= 200 && mouseX <= 600 && mouseY >= 200 && mouseY <= 600) {
+      if (mouseX>= 200 && mouseX <= 600 && mouseY >= 350 && mouseY <= 450) {
         Clicked = true;
       } else {
        Clicked = false;
